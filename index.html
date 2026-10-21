@@ -340,9 +340,12 @@
   .cat-head h2{font-size:clamp(1.8rem,3.6vw,2.4rem);}
   .cat-head p{margin-top:6px;color:var(--fg-soft);}
   .item-list{border-top:1px solid var(--line);margin-top:40px;}
-  .item-row{display:flex;justify-content:space-between;gap:20px;padding-block:20px;border-bottom:1px solid var(--line);}
+  .item-row{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-block:20px;border-bottom:1px solid var(--line);}
   .item-row h3{font-size:1.05rem;font-weight:700;}
   .item-row p{margin-top:4px;color:var(--fg-soft);font-size:0.94rem;}
+  .item-price{flex:none;font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--accent);font-variant-numeric:tabular-nums;}
+  .fav-title-row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;}
+  .fav-title-row .item-price{font-size:0.95rem;}
   .cat-cta{margin-top:36px;}
 
   /* ---------- footer ---------- */
@@ -485,7 +488,7 @@
           </span>
           <span class="menu-text">
             <h3>NY Cookies</h3>
-            <p>Gruesas y rellenas — caramelo y pecan, doble chocolate y más.</p>
+            <p>Kinder, nido y nutella, pecan caramel o chocolate caliente — desde $3.00.</p>
           </span>
           <svg class="menu-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>
         </a>
@@ -529,7 +532,7 @@
           </span>
           <span class="menu-text">
             <h3>Cuchareables</h3>
-            <p>Postre de cuchara en vasito — kinder, galleta y chocolate caliente.</p>
+            <p>Nido y nutella, Dubai chocolate, oreotella o kinder — desde $3.50.</p>
           </span>
           <svg class="menu-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>
         </a>
@@ -558,16 +561,16 @@
         <a class="fav-row stagger-row" href="#ny-cookies">
           <span class="fav-num">Nº1</span>
           <div>
-            <h3>Pecan Caramel</h3>
-            <p>NY cookie rellena de caramelo, con pecans tostadas encima.</p>
+            <div class="fav-title-row"><h3>Pecan Caramel</h3><span class="item-price">$3.00</span></div>
+            <p>Masa de vainilla con chocolate semiamargo y pecans caramelizadas, rellena de manjar.</p>
           </div>
           <img class="fav-photo" loading="lazy" decoding="async" src="images/ny-cookies.webp" alt="">
         </a>
         <a class="fav-row stagger-row" href="#ny-cookies">
           <span class="fav-num">Nº2</span>
           <div>
-            <h3>Chocolate caliente</h3>
-            <p>Cookie de doble chocolate con malvavisco flameado arriba.</p>
+            <div class="fav-title-row"><h3>Chocolate caliente</h3><span class="item-price">$3.00</span></div>
+            <p>Masa de chocolate rellena de brigadeiro de chocolate y malvavisco.</p>
           </div>
           <img class="fav-photo" loading="lazy" decoding="async" src="images/ny-cookies.webp" alt="">
         </a>
@@ -695,9 +698,10 @@
       <h2>NY Cookies</h2><p>Gruesas, rellenas y recién salidas del horno.</p>
     </div>
     <div class="item-list">
-      <div class="item-row stagger-row"><div><h3>Pecan Caramel</h3><p>Rellena de caramelo, con pecans tostadas encima.</p></div></div>
-      <div class="item-row stagger-row"><div><h3>Chocolate caliente</h3><p>Doble chocolate con malvavisco flameado arriba.</p></div></div>
-      <div class="item-row stagger-row"><div><h3>Clásica</h3><p>La de toda la vida, cargada de chispas de chocolate.</p></div></div>
+      <div class="item-row stagger-row"><div><h3>Kinder</h3><p>Masa de vainilla con chocolate de leche y Kinder Bueno, rellena de crema kinder.</p></div><span class="item-price">$3.00</span></div>
+      <div class="item-row stagger-row"><div><h3>Nido y Nutella</h3><p>Masa de vainilla rellena de brigadeiro de nido, con nutella y leche en polvo encima.</p></div><span class="item-price">$3.00</span></div>
+      <div class="item-row stagger-row"><div><h3>Pecan Caramel</h3><p>Masa de vainilla con chocolate semiamargo y pecans caramelizadas, rellena de manjar.</p></div><span class="item-price">$3.00</span></div>
+      <div class="item-row stagger-row"><div><h3>Chocolate caliente</h3><p>Masa de chocolate rellena de brigadeiro de chocolate y malvavisco.</p></div><span class="item-price">$3.00</span></div>
     </div>
     <a class="btn btn-primary cat-cta" href="https://wa.me/593989504641?text=Hola%20Cakey%20Bakey%2C%20quiero%20pedir%20NY%20Cookies%20%F0%9F%8D%AA" target="_blank" rel="noopener">Pedir NY Cookies</a>
   </div>
@@ -758,9 +762,10 @@
       <h2>Cuchareables</h2><p>Postre de cuchara, en vasito individual.</p>
     </div>
     <div class="item-list">
-      <div class="item-row stagger-row"><div><h3>De kinder</h3></div></div>
-      <div class="item-row stagger-row"><div><h3>De galleta</h3></div></div>
-      <div class="item-row stagger-row"><div><h3>Chocolate caliente</h3></div></div>
+      <div class="item-row stagger-row"><div><h3>Nido y Nutella</h3><p>Masa de galleta de vainilla rellena de brigadeiro de nido con nutella, con leche en polvo encima.</p></div><span class="item-price">$3.50</span></div>
+      <div class="item-row stagger-row"><div><h3>Dubai Chocolate</h3><p>Masa de chocolate semiamargo rellena de crema de pistacho y kataifi.</p></div><span class="item-price">$3.50</span></div>
+      <div class="item-row stagger-row"><div><h3>Oreotella</h3><p>Masa de vainilla rellena de nutella y galleta Oreo.</p></div><span class="item-price">$3.50</span></div>
+      <div class="item-row stagger-row"><div><h3>Kinder</h3><p>Masa de vainilla rellena de crema kinder.</p></div><span class="item-price">$3.50</span></div>
     </div>
     <a class="btn btn-primary cat-cta" href="https://wa.me/593989504641?text=Hola%20Cakey%20Bakey%2C%20quiero%20pedir%20cuchareables%20%F0%9F%8D%AE" target="_blank" rel="noopener">Pedir cuchareables</a>
   </div>
