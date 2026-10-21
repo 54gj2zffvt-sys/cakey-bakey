@@ -871,7 +871,7 @@
     if(targetEl.classList.contains('page')){
       e.preventDefault();
       showPage(id);
-      window.scrollTo(0,0);
+      forceScrollTop();
       history.pushState(null, '', '#'+id);
       return;
     }
@@ -885,12 +885,21 @@
     history.pushState(null, '', '#'+id);
   });
 
+  function forceScrollTop(){
+    window.scrollTo(0,0);
+    // the browser can re-run its own fragment scroll a moment after load,
+    // right after a hidden target becomes visible — override it once more.
+    requestAnimationFrame(function(){ window.scrollTo(0,0); });
+    setTimeout(function(){ window.scrollTo(0,0); }, 60);
+  }
+
   function routeFromHash(){
     var id = location.hash.slice(1);
     if(!id){ showPage('home'); return; }
     var el = document.getElementById(id);
     if(el && el.classList.contains('page')){
       showPage(id);
+      forceScrollTop();
     } else if(el){
       showPage('home');
       requestAnimationFrame(function(){ el.scrollIntoView({block:'start'}); });
