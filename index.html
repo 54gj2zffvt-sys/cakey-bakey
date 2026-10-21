@@ -5,6 +5,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Cakey Bakey</title>
 <meta name="description" content="Cakey Bakey — dessert shop en Machala, Ecuador. Cookies, brownies, cheesecakes, pavlovas y pasteles personalizados hechos a mano.">
+<link rel="canonical" href="https://54gj2zffvt-sys.github.io/cakey-bakey/">
+<meta name="theme-color" content="#211109">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cakey Bakey">
+<meta property="og:title" content="Cakey Bakey — Cookies y postres en Machala">
+<meta property="og:description" content="Cookies estilo NY, brownies, cheesecakes, pavlovas y pasteles personalizados hechos a mano. Pide por WhatsApp.">
+<meta property="og:url" content="https://54gj2zffvt-sys.github.io/cakey-bakey/">
+<meta property="og:image" content="https://54gj2zffvt-sys.github.io/cakey-bakey/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_EC">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cakey Bakey — Cookies y postres en Machala">
+<meta name="twitter:description" content="Cookies estilo NY, brownies, cheesecakes, pavlovas y pasteles personalizados hechos a mano. Pide por WhatsApp.">
+<meta name="twitter:image" content="https://54gj2zffvt-sys.github.io/cakey-bakey/images/og-cover.jpg">
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Bakery",
+  "name": "Cakey Bakey",
+  "image": "https://54gj2zffvt-sys.github.io/cakey-bakey/images/og-cover.jpg",
+  "url": "https://54gj2zffvt-sys.github.io/cakey-bakey/",
+  "telephone": "+593989504641",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Machala",
+    "addressRegion": "El Oro",
+    "addressCountry": "EC"
+  },
+  "sameAs": [
+    "https://www.instagram.com/_cakeybakey_/",
+    "https://wa.me/593989504641"
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,600&family=Caveat:wght@600;700&display=swap">
@@ -242,14 +287,17 @@
   .cta-band .btn-primary:hover{background:#3A1A14;}
 
   /* ---------- location ---------- */
-  .loc-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:center;}
+  .loc-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:start;}
   @media (max-width:820px){.loc-grid{grid-template-columns:1fr;}}
   .loc-row{display:flex;gap:14px;align-items:flex-start;padding-block:16px;border-bottom:1px solid var(--line);}
   .loc-row:last-of-type{border-bottom:none;}
   .loc-row svg{width:22px;height:22px;flex:none;color:var(--accent-strong);margin-top:2px;}
   .loc-row h4{font-size:1rem;font-weight:700;margin-bottom:3px;}
   .loc-row p{color:var(--fg-soft);font-size:0.94rem;}
-  .pin-art{display:flex;align-items:center;justify-content:center;}
+  .loc-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;}
+  .pin-art{display:flex;flex-direction:column;gap:14px;}
+  .loc-photo{width:100%;border-radius:22px;object-fit:cover;aspect-ratio:16/10;box-shadow:0 20px 44px -22px rgba(0,0,0,0.5);}
+  .loc-map{width:100%;aspect-ratio:16/10;border:0;border-radius:22px;filter:grayscale(0.25) invert(0.92) contrast(0.92);}
 
   /* ---------- instagram band ---------- */
   .ig-band{display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;}
@@ -357,7 +405,7 @@
       </div>
 
       <div class="hero-photo-wrap">
-        <img class="hero-photo" src="images/pastel.jpg" alt="Pastel personalizado de Cakey Bakey con flores naturales">
+        <img class="hero-photo" src="images/pastel.webp" loading="eager" fetchpriority="high" decoding="async" alt="Pastel personalizado de Cakey Bakey con flores naturales">
         <svg class="hero-seal" viewBox="0 0 220 220" fill="none">
           <defs>
             <path id="topArc" d="M 26,112 A 86,86 0 0 1 194,112" />
@@ -393,7 +441,7 @@
       <div class="menu-board">
         <a class="menu-row stagger-row" href="#ny-cookies">
           <span class="menu-icon">
-            <img src="images/ny-cookies.jpg" alt="">
+            <img loading="lazy" decoding="async" src="images/ny-cookies.webp" alt="">
           </span>
           <span class="menu-text">
             <h3>NY Cookies</h3>
@@ -404,7 +452,7 @@
 
         <a class="menu-row stagger-row" href="#brownies">
           <span class="menu-icon">
-            <img src="images/brownies.jpg" alt="">
+            <img loading="lazy" decoding="async" src="images/brownies.webp" alt="">
           </span>
           <span class="menu-text">
             <h3>Brownies</h3>
@@ -415,7 +463,7 @@
 
         <a class="menu-row stagger-row" href="#cheesecakes">
           <span class="menu-icon">
-            <img src="images/cheesecakes.jpg" alt="">
+            <img loading="lazy" decoding="async" src="images/cheesecakes.webp" alt="">
           </span>
           <span class="menu-text">
             <h3>Cheesecakes</h3>
@@ -426,7 +474,7 @@
 
         <a class="menu-row stagger-row" href="#pavlovas">
           <span class="menu-icon">
-            <img src="images/pavlova.jpg" alt="">
+            <img loading="lazy" decoding="async" src="images/pavlova.webp" alt="">
           </span>
           <span class="menu-text">
             <h3>Pavlovas</h3>
@@ -437,7 +485,7 @@
 
         <a class="menu-row stagger-row" href="#cuchareables">
           <span class="menu-icon">
-            <img src="images/cuchareables.jpg" alt="">
+            <img loading="lazy" decoding="async" src="images/cuchareables.webp" alt="">
           </span>
           <span class="menu-text">
             <h3>Cuchareables</h3>
@@ -448,7 +496,7 @@
 
         <a class="menu-row stagger-row" href="#pasteles">
           <span class="menu-icon">
-            <img src="images/pastel.jpg" alt="">
+            <img loading="lazy" decoding="async" src="images/pastel.webp" alt="">
           </span>
           <span class="menu-text">
             <h3>Pasteles personalizados</h3>
@@ -473,7 +521,7 @@
             <h3>Pecan Caramel</h3>
             <p>NY cookie rellena de caramelo, con pecans tostadas encima.</p>
           </div>
-          <img class="fav-photo" src="images/ny-cookies.jpg" alt="">
+          <img class="fav-photo" loading="lazy" decoding="async" src="images/ny-cookies.webp" alt="">
         </div>
         <div class="fav-row stagger-row">
           <span class="fav-num">Nº2</span>
@@ -481,7 +529,7 @@
             <h3>Chocolate caliente</h3>
             <p>Cookie de doble chocolate con malvavisco flameado arriba.</p>
           </div>
-          <img class="fav-photo" src="images/brownies.jpg" alt="">
+          <img class="fav-photo" loading="lazy" decoding="async" src="images/brownies.webp" alt="">
         </div>
         <div class="fav-row stagger-row">
           <span class="fav-num">Nº3</span>
@@ -489,7 +537,7 @@
             <h3>Cheesecake de berries</h3>
             <p>Base horneada clásica, cubierta con frutos rojos.</p>
           </div>
-          <img class="fav-photo" src="images/cheesecakes.jpg" alt="">
+          <img class="fav-photo" loading="lazy" decoding="async" src="images/cheesecakes.webp" alt="">
         </div>
         <div class="fav-row stagger-row">
           <span class="fav-num">Nº4</span>
@@ -497,7 +545,7 @@
             <h3>Pavlova de fresas</h3>
             <p>Merengue, crema chantillí y fresas frescas.</p>
           </div>
-          <img class="fav-photo" src="images/pavlova.jpg" alt="">
+          <img class="fav-photo" loading="lazy" decoding="async" src="images/pavlova.webp" alt="">
         </div>
       </div>
     </div>
@@ -563,13 +611,19 @@
             <div><h4>Todo se hornea al pedido</h4><p>Mientras más rápido escribas, más rápido lo tienes.</p></div>
           </div>
 
-          <a class="btn btn-primary" style="margin-top:20px;" href="https://wa.me/593989504641?text=Hola%20Cakey%20Bakey%2C%20quiero%20hacer%20un%20pedido%20%F0%9F%8D%AA" target="_blank" rel="noopener">
-            Escribir por WhatsApp
-          </a>
+          <div class="loc-actions">
+            <a class="btn btn-primary" href="https://wa.me/593989504641?text=Hola%20Cakey%20Bakey%2C%20quiero%20hacer%20un%20pedido%20%F0%9F%8D%AA" target="_blank" rel="noopener">
+              Escribir por WhatsApp
+            </a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Plaza+Velur+Machala+Ecuador" target="_blank" rel="noopener">
+              Cómo llegar
+            </a>
+          </div>
         </div>
 
         <div class="pin-art">
-          <img src="images/ny-cookies.jpg" alt="Vitrina de Cakey Bakey en el local BRUTTO, Plaza Velur" style="width:100%;border-radius:22px;object-fit:cover;aspect-ratio:4/5;box-shadow:0 20px 44px -22px rgba(0,0,0,0.5);">
+          <img loading="lazy" decoding="async" src="images/ny-cookies.webp" alt="Vitrina de Cakey Bakey en el local BRUTTO, Plaza Velur" class="loc-photo">
+          <iframe class="loc-map" src="https://maps.google.com/maps?q=Plaza+Velur+Machala+Ecuador&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa hacia Plaza Velur, Machala"></iframe>
         </div>
       </div>
     </div>
@@ -592,7 +646,7 @@
 <div class="page" id="ny-cookies" hidden>
   <div class="wrap pad">
     <a class="back-link" href="#especialidades"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>Volver al menú</a>
-    <img class="cat-banner" src="images/ny-cookies.jpg" alt="Vitrina de NY Cookies de Cakey Bakey">
+    <img class="cat-banner" loading="lazy" decoding="async" src="images/ny-cookies.webp" alt="Vitrina de NY Cookies de Cakey Bakey">
     <div class="cat-head">
       <h2>NY Cookies</h2><p>Gruesas, rellenas y recién salidas del horno.</p>
     </div>
@@ -608,7 +662,7 @@
 <div class="page" id="brownies" hidden>
   <div class="wrap pad">
     <a class="back-link" href="#especialidades"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>Volver al menú</a>
-    <img class="cat-banner" src="images/brownies.jpg" alt="Caja de mini brownies de Cakey Bakey">
+    <img class="cat-banner" loading="lazy" decoding="async" src="images/brownies.webp" alt="Caja de mini brownies de Cakey Bakey">
     <div class="cat-head">
       <h2>Brownies</h2><p>Chocolate intenso, bien húmedo.</p>
     </div>
@@ -624,7 +678,7 @@
 <div class="page" id="cheesecakes" hidden>
   <div class="wrap pad">
     <a class="back-link" href="#especialidades"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>Volver al menú</a>
-    <img class="cat-banner" src="images/cheesecakes.jpg" alt="Cheesecakes de berries y pistacho de Cakey Bakey">
+    <img class="cat-banner" loading="lazy" decoding="async" src="images/cheesecakes.webp" alt="Cheesecakes de berries y pistacho de Cakey Bakey">
     <div class="cat-head">
       <h2>Cheesecakes</h2><p>Horneados estilo L'Atelier.</p>
     </div>
@@ -640,7 +694,7 @@
 <div class="page" id="pavlovas" hidden>
   <div class="wrap pad">
     <a class="back-link" href="#especialidades"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>Volver al menú</a>
-    <img class="cat-banner" src="images/pavlova-pair.jpg" alt="Pavlovas de fresas de Cakey Bakey">
+    <img class="cat-banner" loading="lazy" decoding="async" src="images/pavlova-pair.webp" alt="Pavlovas de fresas de Cakey Bakey">
     <div class="cat-head">
       <h2>Pavlovas</h2><p>Merengue crocante por fuera, suave por dentro.</p>
     </div>
@@ -655,7 +709,7 @@
 <div class="page" id="cuchareables" hidden>
   <div class="wrap pad">
     <a class="back-link" href="#especialidades"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>Volver al menú</a>
-    <img class="cat-banner" src="images/cuchareables.jpg" alt="Cuchareables de Cakey Bakey">
+    <img class="cat-banner" loading="lazy" decoding="async" src="images/cuchareables.webp" alt="Cuchareables de Cakey Bakey">
     <div class="cat-head">
       <h2>Cuchareables</h2><p>Postre de cuchara, en vasito individual.</p>
     </div>
@@ -671,7 +725,7 @@
 <div class="page" id="pasteles" hidden>
   <div class="wrap pad">
     <a class="back-link" href="#especialidades"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>Volver al menú</a>
-    <img class="cat-banner" src="images/pastel.jpg" alt="Pastel personalizado de Cakey Bakey">
+    <img class="cat-banner" loading="lazy" decoding="async" src="images/pastel.webp" alt="Pastel personalizado de Cakey Bakey">
     <div class="cat-head">
       <h2>Pasteles personalizados</h2><p>Para la ocasión que estés celebrando.</p>
     </div>
